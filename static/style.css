@@ -1,0 +1,43 @@
+.wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 16px;
+    letter-spacing: 1.2;
+}
+
+div.header-section {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 60px;
+}
+
+div.header {
+    font-size: 20px;
+}
+
+.wrapper a {
+    color: black;
+}
+
+a.nav-link {
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+.goout-projects {
+    padding-left: 10px;
+}
+
+.profile_image {
+    max-height: 300px;
+}
+
+.post {
+    max-height: 600px;
+}
+
+.post img {
+    width: 100%;
+    max-height: 100%;
+}
+
