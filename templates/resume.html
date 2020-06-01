@@ -6,16 +6,9 @@
 
 <body>
     <div class="wrapper">
-        <div class="header-section">
-            <div class="header">
-                <h1>Resume</h1>
-            </div>
-            <div class="navigation-bar">
-                <a href="/" aria-current="page" class="nav-link">home</a>
-                <a href="/resume" class="nav-link">resume</a>
-                <a href="/analog" class="nav-link">analog</a>
-            </div>
-        </div>
+        {% with current_page = "resume" %}
+        {% include 'navigation_bar.html' %}
+        {% endwith %}
         <div class="content">
             <div class="profile">
                 <div class="profile_image">
@@ -26,8 +19,7 @@
                     <p>
                         I'm backend developer based in Prague, currently working for <a
                             href="https://www.goout.net">GoOut</a>
-                        as Kotlin
-                        developer.
+                        as Kotlin developer.
                     </p>
                 </div>
             </div>
@@ -35,19 +27,19 @@
             <h2>Experience</h2>
             <div class="experience-overview">
                 <p>
-                    I've been working for Czech startup <a href="https://www.goout.net">GoOut</a> for the last 4 years
-                    as a developer. I join the company as first "hired" developer, so I was part of the whole growing
-                    and changing process. I started as Java developer, but I was also doing some basic frontend
-                    (Javascript, jQuery, Freemarker templating system). We were using our DIY solutions: maintaining
-                    database servers (MySQL/Percona), manually deploing and taking care of our Linux servers. As the
-                    product and team grew, I moved fully to backend positions and left my frontend days behind, still
-                    doing some smaller devops things.
+                    I've been working for Czech startup <a target="_blank" href="https://www.goout.net">GoOut</a> for
+                    the last 4 years as a developer. I've joined the company as first "hired" developer, so I was part
+                    of the whole growing and changing process. I started as a Java developer, but I was also doing some
+                    basic frontend (Javascript, jQuery, Freemarker templating system). We were using our DIY solutions:
+                    maintaining database servers (MySQL/Percona), manually deploying and taking care of our Linux
+                    servers. As the product and team grew, I moved fully to backend positions and left my frontend days
+                    behind, still doing some smaller DevOps things.
                     </br>
-                    A lot has changed since then (for the better), we grew up as team, we migrated to Kotlin, split our
-                    monolith app into microservices and started with all these fancy new technologies. I had a chance
-                    to take leading role in a small team and help new people with onboarding. We end up using Google
-                    Cloud Platform, Kubernetes, Docker and GitLab CI, doing proper code reviews and writing detailed
-                    tech specifications.
+                    A lot has changed since then (for the better), we grew up as a team, we migrated to Kotlin, split
+                    our monolith app into microservices and started with all these fancy new technologies. I had a
+                    chance to take leading role in a small team and help new people with onboarding. We end up using
+                    Google Cloud Platform, Kubernetes, Docker and GitLab CI, doing proper code reviews and writing
+                    detailed tech specifications.
                 </p>
             </div>
             <h3>Projects I've been working on</h3>
@@ -59,25 +51,26 @@
                     refactoring of code) and we end up with fresh language which is making developer life so much
                     easier.</p>
                 <h4>Integration of PayU payment gateway</h4>
-                <p>One of my first project was payment gateway implementation. It was a great experience to be working
-                    on such important part of our system (and especially from the point of our customers). I was
-                    struggling a bit with lousy documentation and missing sandboxes, but we end up with fast and
+                <p>One of my first projects was the implementation of a payment gateway. It was a great experience to be
+                    working on such an important part of our system (especially from the point of our customers). I was
+                    struggling a bit with lousy documentation and missing sandboxes, but we end up with a fast and
                     trustworthy solution. We even implemented "embedded" payment which looks like our native solution
                     (to make it more comfortable for customers), which hasn't been done before with PayU.</p>
-                <h4>Implementation of Elasticsearch server</h4>
+                <h4>Integration of Elasticsearch server</h4>
                 <p>As we hit some limitation of our MySQL searchs/entity hydrations we decided to try
                     Elasticsearch for our listings and core endpoints. I was in charge of server installation and
                     backend implementation. I learned a lot about mappings (especially from mistakes I've made), setting
-                    up new indices (reindexing, migrations, etc) and even few things about full-text search and some
+                    up new indices (reindexing, migrations, etc) and even a few things about full-text search and some
                     search issues. We started with Elasticsearch as a secondary database, used for search speed up but
                     end up using it even as our primary source for specific cases.</p>
-                <h4>Implementation of Kafka messaging system</h4>
+                <h4>Integration of Kafka messaging system</h4>
                 <p>As our code base grew, we end up in need to have some more "centralized" approach to different events
                     going through our system (like ticket purchase, or event like). I was working on the whole solution
                     integration with my colleague. We deployed our devel and production Kafka cluster and prepared
-                    backend service to provide smooth developer experience.</p>
-                <h4>Implementation of Firebase live DB and cloud messaging system</h4>
-                <p>As a company we were very tied with our Android/iOS apps and apart from creating APIs, we also needed
+                    backend service to provide a smooth developer experience.</p>
+                <h4>Integration of Firebase live DB and cloud messaging system</h4>
+                <p>As a company, we were very tied with our Android/iOS apps and apart from creating APIs, we also
+                    needed
                     a solution for live ticket distribution for our scanner app and solution for mobile notifications.
                     We decided to go for Firebase, I created microservice to maintain our scanning
                     apps updated and pull all entry logs from the live DB. We also used Firebase for notification
@@ -85,33 +78,34 @@
                 </p>
             </div>
             <h2>Previous experience</h2>
-            <p>I was working for 2 and half year for <a href="https://www.eway-crm.com/">eWay CRM</a> which is a
-                Prague company working on it's own CRM solution for Outlook. I started as a part timer (I was still
-                studying back then) and my job was to migrate from old CMS solution to new one. Preparing FAQs and
+            <p>I was working for 2 and half year for <a target="_blank" href="https://www.eway-crm.com/">eWay CRM</a>
+                which is a Prague company working on it's own CRM solution for Outlook. I started as a parttimer (I was
+                still studying back then) and my job was to migrate from old CMS solution to a new one. Preparing FAQs
+                and
                 user manuals for our customers. Then I moved to technical consultant/suport, I was helping with
-                remote installation and was part of the customer support team (with worldwide clients). Finally I
-                end up as a C# developer (partially helping with PHP), we had a great code review and it was
+                remote installation and was part of the customer support team (with worldwide clients). Finally, I
+                ended up as a C# developer (partially helping with PHP), we had a great code review and it was
                 interesting first "real" experience.</p>
             <h2>Education</h2>
             <ul>
-                <li>Bachelor degree - Software Engineering at <a href="https://fit.cvut.cz/cs">Faculty of Information
-                        Technology</a> from <a href="https://www.cvut.cz/en">Czech Technical University in Prague</a>
-                    (2012-2015)</li>
-                <li><a href="https://www.sps-tabor.cz/">SPŠ Tábor</a>, field of study: Technical Lyceum (focused on
-                    math and programming) </li>
+                <li>Bachelor degree - Software Engineering at <a target="_blank" href="https://fit.cvut.cz/cs">Faculty
+                        of Information Technology</a> from <a target="_blank" href="https://www.cvut.cz/en">Czech
+                        Technical University in Prague</a>(2012-2015)</li>
+                <li><a target="_blank" href="https://www.sps-tabor.cz/">SPŠ Tábor</a>, field of study: Technical Lyceum
+                    (focused on math and programming) </li>
             </ul>
             <h2>How I see myself</h2>
             <ul>
                 <li>
-                    I am very social person, I like to be part of the team and to hangout with people. I do like
+                    I am a very social person, I like to be part of the team and to hang out with people. I do like
                     cooperating with skilled colleagues and learn something new.
                 </li>
                 <li>
-                    I'm expressive, I like to be part of whole developing process (from design, specs to implementation)
-                    and I like to comment on stuff.
+                    I'm expressive, I like to be part of the whole developing process (from design, specs to
+                    implementation) and I like to comment on stuff.
                 </li>
                 <li>
-                    I prefer working on single project/app to which I can attach and preferably from field that I do
+                    I prefer working on a single project/app to which I can attach and preferably from a field that I do
                     understand or I'm keen on.
                 </li>
                 <li>
@@ -121,7 +115,7 @@
                 <li>
                     I like culture, especially music, visiting concerts, theatre plays, cinemas or anything new and
                     interesting.
-                    Check my music taste <a href="https://www.last.fm/user/GiveMeMilk">here</a>.
+                    Check my music taste <a target="_blank" href="https://www.last.fm/user/GiveMeMilk">here</a>.
                 </li>
             </ul>
             <h2>Contact me</h2>
@@ -130,10 +124,10 @@
                     <a href="mailto:radim.lenger@gmail.com">radim.lenger@gmail.com</a>
                 </li>
                 <li>
-                    <a href="www.linkedin.com/in/radim-lenger">linkedin.com/in/radim-lenger</a>
+                    <a target="_blank" href="www.linkedin.com/in/radim-lenger">linkedin.com/in/radim-lenger</a>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/radim.lenger/">instagram.com/radim.lenger/</a>
+                    <a target="_blank" href="https://www.instagram.com/radim.lenger/">instagram.com/radim.lenger/</a>
                 </li>
             </ul>
         </div>

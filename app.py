@@ -11,6 +11,18 @@ def index():
 def resume():
     return render_template('resume.html')
 
+@app.route('/analog')
+def analog():
+    return render_template('analog.html')
+
+@app.route('/analog/tokyo')
+def analog_tokyo():
+    return render_template('tokyo.html')
+
+@app.route('/analog/osaka')
+def analog_osaka():
+    return render_template('osaka.html')
+
 @app.errorhandler(404) 
 def not_found(e): 
     return render_template("not_found.html")

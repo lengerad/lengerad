@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href='/static/style.css' />
+</head>
+
+<body>
+    <div class="wrapper">
+        {% with current_page = "analog" %}
+        {% include 'navigation_bar.html' %}
+        {% endwith %}
+        <div class="content">
+            <div class="image-post post">
+                <img src="/static/images/osaka/osaka-street.jpg" alt="Osaka food street">
+            </div>
+            <div class="image-post post">
+                <img src="/static/images/osaka/choco-banana.jpg" alt="Street food">
+            </div>
+            <div class="image-post post">
+                <img src="/static/images/osaka/bull-restaurant.jpg" alt="Bull restaurant">
+            </div>
+            <div class="image-post post">
+                <img src="/static/images/osaka/glico-man.jpg" alt="Glico man and me">
+            </div>
+            <div class="image-post post">
+                <img src="/static/images/osaka/osaka-metro.jpg" alt="Osaka metro">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

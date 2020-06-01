@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href='/static/style.css' />
+</head>
+
+<body>
+    <div class="wrapper">
+        {% with current_page = "analog" %}
+        {% include 'navigation_bar.html' %}
+        {% endwith %}
+        <div class="content">
+            <div class="image-post post">
+                <img src="/static/images/tokyo/street-taxi.jpg" alt="Taxi car on crossroads">
+            </div>
+            <div class="image-post post">
+                <img src="/static/images/tokyo/round-building.jpg" alt="Round building with tiles">
+            </div>
+            <div class="image-post post">
+                <img src="/static/images/tokyo/hotel-view.jpg" alt="Hotel view">
+            </div>
+            <div class="image-post post">
+                <img src="/static/images/tokyo/me-museum.jpg" alt="Me and museum">
+            </div>
+            <div class="image-post post">
+                <img src="/static/images/tokyo/tall-building.jpg" alt="Tall building with tiles">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

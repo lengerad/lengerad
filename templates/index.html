@@ -6,16 +6,10 @@
 
 <body>
     <div class="wrapper">
-        <div class="header-section">
-            <div class="header">
-                <h1>Home</h1>
-            </div>
-            <div class="navigation-bar">
-                <a href="/" aria-current="page" class="nav-link">home</a>
-                <a href="/resume" class="nav-link">resume</a>
-                <a href="/analog" class="nav-link">analog</a>
-            </div>
-        </div>
+        {% with current_page = "home" %}
+        {% include 'navigation_bar.html' %}
+        {% endwith %}
+
         <div class="content">
             <div class="post">
                 <p>Soon I will be adding new posts to my site and you will see more content, for now I will leave

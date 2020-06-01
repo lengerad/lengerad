@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href='/static/style.css' />
+</head>
+
+<body>
+    <div class="wrapper">
+        {% with current_page = "analog" %}
+        {% include 'navigation_bar.html' %}
+        {% endwith %}
+        <div class="content">
+            <div class="post">
+                <h2>Tokyo</h1>
+                    <p>We stayed at Tokyo for almost a week and it's a definitely one of my favourite cities so far.
+                        Here are couple of pictures from wandering across the town and enjoying all the great
+                        architecture and tasty food.</p>
+                    <a href="/analog/tokyo">
+                        <img src="/static/images/tokyo_landscape.jpg" alt="Tokyo overview from goverment building">
+                    </a>
+            </div>
+            <div class="post">
+                <h2>Osaka </h1>
+                    <p>Osaka was our second main base during our times in Japan, it's definitely place to go for a
+                        foodies. I also bought my first analog camera there, so few pictures are actually my first ones.
+                    </p>
+                    <a href="/analog/osaka">
+                        <img src="/static/images/osaka_car.jpg" alt="Car during night in Osaka">
+                    </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
